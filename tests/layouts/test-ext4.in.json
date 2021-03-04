@@ -1,0 +1,78 @@
+{
+    "disks": [
+        {
+            "device": "#disk_1",
+            "read_only": false,
+            "contains_system": true,
+            "partitions": [
+                {
+                    "id": 1,
+                    "size": "1G",
+                    "partition_type": "efi",
+                    "encrypted": false,
+                    "fs_type": "fat32",
+                    "label": "uefi",
+                    "is_system": false,
+                    "is_root": false,
+                    "lvm": [],
+                    "zfs": []
+                },
+                {
+                    "id": 2,
+                    "size": "1G",
+                    "partition_type": "linux",
+                    "encrypted": false,
+                    "fs_type": "ext4",
+                    "label": "data_1",
+                    "is_system": false,
+                    "is_root": false,
+                    "lvm": [],
+                    "zfs": []
+                },
+                {
+                    "id": 3,
+                    "size": "1G",
+                    "partition_type": "linux",
+                    "encrypted": true,
+                    "fs_type": "ext4",
+                    "label": "data_2",
+                    "is_system": false,
+                    "is_root": false,
+                    "lvm": [],
+                    "zfs": []
+                },
+                {
+                    "id": 4,
+                    "size": "",
+                    "partition_type": "linux",
+                    "encrypted": true,
+                    "fs_type": "lvm",
+                    "label": "system",
+                    "is_system": true,
+                    "is_root": false,
+                    "lvm": [
+                        {
+                            "id": 0,
+                            "size": "1G",
+                            "volume_type": "linux",
+                            "encrypted": false,
+                            "fs_type": "swap",
+                            "label": "swap",
+                            "is_root": false
+                        },
+                        {
+                            "id": 1,
+                            "size": "",
+                            "volume_type": "linux",
+                            "encrypted": false,
+                            "fs_type": "ext4",
+                            "label": "root",
+                            "is_root": true
+                        }
+                    ],
+                    "zfs": []
+                }
+            ]
+        }
+    ]
+}

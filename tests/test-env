@@ -1,0 +1,16 @@
+#!/bin/sh
+
+host="test-ext4"
+
+if [ "${#}" -eq 1 ]
+then
+    host=${1}
+fi
+
+../target/debug/nixos-setup env \
+    --hardware "hardware" \
+    --host "${host}" \
+    --wpa-password "password" \
+    --wpa-ssid "ssid" \
+    --key-name "key_file" \
+    --key-path "/tmp"

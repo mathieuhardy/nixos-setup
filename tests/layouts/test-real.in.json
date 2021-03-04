@@ -1,0 +1,41 @@
+{
+    "disks": [
+        {
+            "device": "#disk_1",
+            "read_only": false,
+            "contains_system": true,
+            "partitions": [
+                {
+                    "id": 1,
+                    "size": "1G",
+                    "partition_type": "efi",
+                    "encrypted": false,
+                    "fs_type": "fat32",
+                    "label": "uefi",
+                    "is_system": false,
+                    "is_root": false,
+                    "lvm": [],
+                    "zfs": []
+                },
+                {
+                    "id": 2,
+                    "size": "",
+                    "partition_type": "linux",
+                    "encrypted": true,
+                    "fs_type": "zfs",
+                    "label": "pool",
+                    "is_system": true,
+                    "is_root": false,
+                    "lvm": [],
+                    "zfs": [
+                        {
+                            "name": "root",
+                            "mountpoint": "/",
+                            "is_root": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

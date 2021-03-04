@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo "choucroute" > /tmp/salt
+
+../target/debug/nixos-setup luks \
+    --password "password" \
+    --salt "/tmp/salt" \
+    --iterations 13 \
+    --key-size 4096

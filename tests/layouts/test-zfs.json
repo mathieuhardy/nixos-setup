@@ -1,0 +1,125 @@
+{
+    "disks": [
+        {
+            "device": "/dev/mmcblk0",
+            "read_only": false,
+            "contains_system": true,
+            "partitions": [
+                {
+                    "id": 1,
+                    "size": "1G",
+                    "partition_type": "efi",
+                    "encrypted": false,
+                    "fs_type": "fat32",
+                    "label": "uefi",
+                    "is_system": false,
+                    "is_root": false,
+                    "lvm": [],
+                    "zfs": [],
+                    "device": "/dev/mmcblk0p1",
+                    "device_name": "mmcblk0p1",
+                    "device_by_id": "/dev/disk/by-id/mmc-SU08G_0x21a906b7-part1",
+                    "luks_mapper": null,
+                    "uid": "mmc-SU08G_0x21a906b7-part1"
+                },
+                {
+                    "id": 2,
+                    "size": "1G",
+                    "partition_type": "linux",
+                    "encrypted": false,
+                    "fs_type": "zfs",
+                    "label": "bank_data",
+                    "is_system": false,
+                    "is_root": false,
+                    "lvm": [],
+                    "zfs": [
+                        {
+                            "name": "data_1",
+                            "mountpoint": "/data_1",
+                            "is_root": false
+                        }
+                    ],
+                    "device": "/dev/mmcblk0p2",
+                    "device_name": "mmcblk0p2",
+                    "device_by_id": "/dev/disk/by-id/mmc-SU08G_0x21a906b7-part2",
+                    "luks_mapper": null,
+                    "uid": "mmc-SU08G_0x21a906b7-part2"
+                },
+                {
+                    "id": 3,
+                    "size": "1G",
+                    "partition_type": "linux",
+                    "encrypted": true,
+                    "fs_type": "zfs",
+                    "label": "bank_data",
+                    "is_system": false,
+                    "is_root": false,
+                    "lvm": [],
+                    "zfs": [
+                        {
+                            "name": "data_2",
+                            "mountpoint": "/data_2",
+                            "is_root": false
+                        }
+                    ],
+                    "device": "/dev/mmcblk0p3",
+                    "device_name": "mmcblk0p3",
+                    "device_by_id": "/dev/disk/by-id/mmc-SU08G_0x21a906b7-part3",
+                    "luks_mapper": "/dev/mapper/bank_data",
+                    "uid": "mmc-SU08G_0x21a906b7-part3"
+                },
+                {
+                    "id": 4,
+                    "size": "1G",
+                    "partition_type": "linux",
+                    "encrypted": false,
+                    "fs_type": "zfs",
+                    "label": "bank_system",
+                    "is_system": false,
+                    "is_root": false,
+                    "lvm": [],
+                    "zfs": [
+                        {
+                            "name": "useless",
+                            "mountpoint": "/useless",
+                            "is_root": false
+                        },
+                        {
+                            "name": "useless2",
+                            "mountpoint": "/useless2",
+                            "is_root": false
+                        }
+                    ],
+                    "device": "/dev/mmcblk0p4",
+                    "device_name": "mmcblk0p4",
+                    "device_by_id": "/dev/disk/by-id/mmc-SU08G_0x21a906b7-part4",
+                    "luks_mapper": null,
+                    "uid": "mmc-SU08G_0x21a906b7-part4"
+                },
+                {
+                    "id": 5,
+                    "size": "0",
+                    "partition_type": "linux",
+                    "encrypted": true,
+                    "fs_type": "zfs",
+                    "label": "bank_system",
+                    "is_system": true,
+                    "is_root": false,
+                    "lvm": [],
+                    "zfs": [
+                        {
+                            "name": "root",
+                            "mountpoint": "/",
+                            "is_root": true
+                        }
+                    ],
+                    "device": "/dev/mmcblk0p5",
+                    "device_name": "mmcblk0p5",
+                    "device_by_id": "/dev/disk/by-id/mmc-SU08G_0x21a906b7-part5",
+                    "luks_mapper": "/dev/mapper/bank_system",
+                    "uid": "mmc-SU08G_0x21a906b7-part5"
+                }
+            ]
+        }
+    ]
+}

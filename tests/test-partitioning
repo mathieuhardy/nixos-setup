@@ -1,0 +1,5 @@
+#!/bin/sh
+
+../target/debug/nixos-setup partitioning \
+    --password "password" \
+    --device "disk_1=/dev/mmcblk0"

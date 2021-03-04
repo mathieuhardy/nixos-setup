@@ -1,0 +1,51 @@
+{
+    "disks": [
+        {
+            "device": "/dev/mmcblk0",
+            "read_only": false,
+            "contains_system": true,
+            "partitions": [
+                {
+                    "id": 1,
+                    "size": "1G",
+                    "partition_type": "efi",
+                    "encrypted": false,
+                    "fs_type": "fat32",
+                    "label": "uefi",
+                    "is_system": false,
+                    "is_root": false,
+                    "lvm": [],
+                    "zfs": [],
+                    "device": "/dev/mmcblk0p1",
+                    "device_name": "mmcblk0p1",
+                    "device_by_id": "/dev/disk/by-id/mmc-SU08G_0x21a906b7-part1",
+                    "luks_mapper": null,
+                    "uid": "mmc-SU08G_0x21a906b7-part1"
+                },
+                {
+                    "id": 2,
+                    "size": "0",
+                    "partition_type": "linux",
+                    "encrypted": true,
+                    "fs_type": "zfs",
+                    "label": "pool",
+                    "is_system": true,
+                    "is_root": false,
+                    "lvm": [],
+                    "zfs": [
+                        {
+                            "name": "root",
+                            "mountpoint": "/",
+                            "is_root": true
+                        }
+                    ],
+                    "device": "/dev/mmcblk0p2",
+                    "device_name": "mmcblk0p2",
+                    "device_by_id": "/dev/disk/by-id/mmc-SU08G_0x21a906b7-part2",
+                    "luks_mapper": "/dev/mapper/pool",
+                    "uid": "mmc-SU08G_0x21a906b7-part2"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+../target/debug/nixos-setup install \
+    --password "password" \
+    --repository "/home/mhardy/Downloads/Divers/nixos"
