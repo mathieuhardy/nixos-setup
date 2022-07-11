@@ -168,7 +168,7 @@ r#"# Auto-generated, do not edit !
 
 {
   boot.loader = {
-    timeout: 1;
+    timeout = 1;
 
     efi = {
       canTouchEfiVariables = true;
